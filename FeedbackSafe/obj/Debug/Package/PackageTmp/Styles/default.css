@@ -1,0 +1,48 @@
+/* Structural Containers
+------------------------------------------------------------------------------*/
+
+#default_leftarea {
+	width:550px;
+	height:320px;
+	float:left;
+	background: #FFFFFF;
+}
+
+#default_rightarea {
+	margin-right:20px;
+	margin-left:40px;
+	height:320px;
+	width:330px;
+	float:left;
+}
+
+#default_bottomarea 
+{
+    text-align:center;
+	padding-top:20px;
+	height:200px;
+	width:940px;
+	clear:both;
+}
+
+.default_banner_image{
+	margin-left:3px;
+	margin-right:3px;
+	display:inline-block;
+}
+
+.default_largeTitle
+{
+ font-size:30px;  
+ font-weight:bold;
+ margin: 30px 10px 30px 10px; 
+ text-align:center;
+ color: #E36B24;
+}
+
+
+/* List Styles
+------------------------------------------------------------------------------*/
+
+ul  {padding: 15px 0px 10px 25px; list-style-type:square; list-style-position:inside;}
+li  {padding: 7px 5px 7px 0px; font-size:16px; font-weight:normal;}

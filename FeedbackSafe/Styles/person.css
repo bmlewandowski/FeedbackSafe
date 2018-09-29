@@ -1,0 +1,62 @@
+/* Structural Containers
+------------------------------------------------------------------------------*/
+
+#person_leftarea {
+	width:550px;
+	float:left;
+}
+
+#person_rightarea {
+	margin-left:40px;
+	width:330px;
+	float:left;
+
+}
+
+#person_bottomarea {
+	padding-top:20px;
+	height:10px;
+	width:960px;
+	clear:both;
+}
+
+
+/* Content Containers
+------------------------------------------------------------------------------*/
+
+
+#person_createmessage {
+	height:320px;
+	width:330px;
+	background: #00B2B4;
+}
+
+#person_groupmessages {
+	width:550px;
+	height:320px;
+	background: #00B2B4;
+}
+
+.person_date
+{
+    font-size:12px; 
+}
+
+
+.person_comment 
+{
+    margin:12px;  
+}
+
+.person_commentbox
+{
+    
+}
+.person_commentbox  a:link {color:#333333;}
+.person_commentbox  a:visited {color:#333333;}
+.person_commentbox  a:hover {color:#77A6BA;}
+.person_commentbox  a:active {color:#333333;}
+.person_commentbox  a {text-decoration: none;}
+
+
+

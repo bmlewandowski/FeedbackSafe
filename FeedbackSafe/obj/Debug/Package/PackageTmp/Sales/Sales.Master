@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sales.master.cs" Inherits="FeedbackSafe.Sales.Sales" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>Feedback Safe Sales</title>
+    <meta name="DESCRIPTION" content="" />
+   <meta name="KEYWORDS" content="" />
+
+<!--LOAD STYLESHEETS-->
+    <link href="~/Styles/global.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/public.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/default.css" rel="stylesheet" type="text/css" />
+<!--LOAD JAVASCRIPT-->
+
+<!--BEGIN EXTERNAL HEAD CONTENT-->      
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+<!--END EXTERNAL HEAD CONTENT-->
+
+<!-- BEGIN Google Analytics -->
+<!-- END Google Analytics -->
+
+</head>
+<body>
+    <form id="Form1" runat="server" enctype="multipart/form-data">
+
+<!--JAVASCRIPT SCRIPT MANAGER-->
+        <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+
+<!--TOP ANCHOR-->
+        <a name="top"></a>
+
+<div id="global_outer">
+	<div id="public_top">
+
+		<div id="public_login">
+                    
+            <div style="float:left; padding: 5px 0px 0px 20px; font-size:16px;"> 
+
+                <asp:Label ID="lbl_masterSalesID" runat="server" Text="[SALES ID]" ForeColor="White" Visible="false"></asp:Label>
+                <strong>ORG:</strong> <asp:Label ID="lbl_masterOrg" runat="server" Text="[IMPERSONATED ORG]" ForeColor="White" Font-Bold="true"></asp:Label>
+
+            </div>              
+	                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+
+		</div>
+		
+        <div id="public_logo">
+        
+            <a href="/Sales/Default.aspx">
+            <img src="/Images/interface/feedbacksafe_logo.png" alt="Feedback Safe Logo" />
+            </a>
+        
+        </div>
+		
+	</div>
+
+	<div id="public_nav">
+
+		<!--BEGIN NAVIGATION-->
+
+			<p class="public_nav_button"><a href="/Sales/Default.aspx" title="Dashboard">DASHBOARD</a></p>
+
+            <p class="public_nav_button"><a href="/Sales/ManageOrg.aspx" title="Manage Organization">ORGS</a></p>
+
+            <p class="public_nav_button"><a href="/Sales/ManageLeaders.aspx" title="Manage Leaders">LEADERS</a></p>
+
+			<p class="public_nav_button"><a href="/Sales/ManageUsers.aspx" title="Manage Users">USERS</a></p>
+
+			<p class="public_nav_button"><a href="/Sales/ManageLeads.aspx" title="Manage Leads">LEADS</a></p>
+
+		<!--END NAVIGATION-->
+
+	</div>
+
+
+
+		<!--BEGIN PAGE CONTENT-->
+        <div id="public_main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+		<!--END PAGE CONTENT-->
+
+  
+	<div class="public_hr"></div>
+
+<!--BEGIN FOOTER-->
+	<div id="public_bottom">
+	FEEDBACK SAFE SALES
+	</div>
+<!--END FOOTER-->
+
+</div>
+</form>
+</body>
+</html>
